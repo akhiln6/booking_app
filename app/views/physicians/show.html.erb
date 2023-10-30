@@ -1,0 +1,3 @@
+<%= @physician.dname %><br>
+<%= link_to "create appointment", appointments_path(id: @physician.id), data: { turbo_method: :post } %><br>
+<%= link_to "show appointments", showing_path(id: @physician.id) %>

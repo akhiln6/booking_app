@@ -1,0 +1,23 @@
+<h1>Physicians Names</h1>
+<ul>
+  <% @physicians.each do |physician| %>
+    <li>
+      <%= link_to physician.dname, physician%><br>
+      <%# <%= physician.appointments.user%> 
+    </li>
+   <% end %>
+</ul>
+<h1>all appointment list</h1>
+<ul>
+  <% @everything.each do |everything| %>
+    <li>
+      <%= everything.appointment_date %><br>
+      <%= everything.user.email %><br>
+    </li>
+   <% end %>
+</ul>
+<%= button_to(
+        "Log Out",
+        destroy_user_session_path,
+        method: :delete
+      ) %>

@@ -1,0 +1,10 @@
+<h1>appointment list</h1>
+<ul>
+  <% @appointments.each do |appointment| %>
+    <li>
+      <%= appointment.appointment_date %><br>
+      <%= appointment.user.email %><br>
+    
+    </li>
+   <% end %>
+</ul>
